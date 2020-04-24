@@ -32,7 +32,7 @@ Things you may want to cover:
 ## Association
  - has_many :messages
  
- - has_many :chat_members
+ - has_many :groups, through: :chat_members
 
 ## groupテーブル
  |Coloumn|Type|Options|
@@ -41,7 +41,7 @@ Things you may want to cover:
 
 
 ## Association
- - has_many :chat_members
+ - has_many :users, through: :chat_members
  - has_many :messages
  
 
