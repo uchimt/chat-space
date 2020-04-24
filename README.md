@@ -38,7 +38,7 @@ Things you may want to cover:
  |Coloumn|Type|Options|
  |-------|----|-------|
  |name|string|null: false, unique: true|
- |main_user|integer|null: false, forign_key: true|
+
 
 ## Association
  - has_many :chat_members
