@@ -31,15 +31,12 @@ Things you may want to cover:
  |password|string|null: false｜
 ## Association
  - has_many :messages
- -
  - has_many :groups, through: :users_groups
 
 ## groupsテーブル
  |Coloumn|Type|Options|
  |-------|----|-------|
  |name|string|null: false, unique: true|
-
-
 ## Association
  - has_many :users, through: :users_groups
  - has_many :messages
