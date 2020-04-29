@@ -32,18 +32,19 @@
         padding-top: 20px;
         .group {
           margin-bottom: 40px;
+        a {
+          text-decoration: none;
+        }
           &__name {
             font-size: 15px;
             color: $textWhiteColor;
             font-weight: bold;
-            text-decoration: none;       
           }
           &__latest-message {
             font-size: 11px;
             color: $textWhiteColor;
             padding-top: 5px;
             font-weight: bold; 
-            text-decoration: none;
           }
         }
       } 
