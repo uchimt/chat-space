@@ -1,0 +1,99 @@
+.chat-main {
+    height: 100vh;
+    width: calc(100vw - 300px);
+    .group-info {
+      height: 100px;
+      background-color: #ffffff;
+      border-bottom: 1px #eeeeee;
+      display: flex;
+      justify-content: space-between;
+      &__current-group {
+        margin: 40px 35px;
+        &--group-name {
+          color: $textGrayColor;
+          font-size: 20px;
+        }
+        &--member-list {
+          color: $subtextGrayColor;
+          font-size: 12px;
+          padding-top: 15px;
+        }
+      }
+      &__edit-group {
+        height: 40px;
+        width: 72px;
+        margin: 28px 40px;
+        text-align: center;
+        line-height: 40px;
+        color: $btLblueColor;
+        font-size: 16px;
+        border: solid 1px;
+        text-decoration: none;
+      }
+    }
+     .message-list {
+      height: calc(100vh - 100px - 90px);
+      background-color: #fafafa;
+      padding-top: 35px;
+    }
+      .message {
+        margin: 0 40px;
+        &__info {
+          display: flex;
+          justify-content: flex-start;
+          &--user-name {
+            color: $textGrayColor;  
+            font-size: 16px;
+          }
+          &--date {
+            color: $subtextGrayColor;
+            font-size: 12px;
+            padding-left: 5px;
+          }
+        }
+        &__text {
+          color: #434a54;
+          font-size: 14px;
+          padding-bottom: 46px;
+        }
+      }
+    .message-form {
+      height: 90px;
+      background-color: #d2d2d2;
+      padding: 20px 40px;
+      .new-message {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .input {
+          height: 50px;
+          width: 100%; 
+          position: relative;
+          &__text {
+            height: 50px;
+            width: 100%;
+            padding: 0 10px;
+          }
+          &__image {
+            position: absolute;
+            line-height: 50px;
+            right: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+          }
+          &__image__file {
+            display: none;
+          }
+        }
+        .submit-btn {
+          height: 50px;
+          width: 100px;
+          background-color: $btLblueColor;
+          margin-left: 15px;
+          font-size: 16px;
+          color: $textWhiteColor;
+          cursor: pointer;
+        }
+      }
+    }
+  }

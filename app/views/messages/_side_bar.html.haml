@@ -1,0 +1,30 @@
+.side-bar
+  .side-bar__current-user
+    .top-items
+      %p.top-items__user-name
+        user
+      %ul.top-items__icons
+        =link_to "#" do
+          =icon('far fa-edit', class: "top-items__icons--edit-account")
+        =link_to "#" do
+          =icon('fas fa-cog', class: "top-items__icons--new-group")
+
+  .side-bar__group-list
+    .groups
+      .group
+        =link_to "#" do
+          %p.group__name 
+            test
+          %p.group__latest-message 
+            メッセージはまだありません
+      .group
+        =link_to "#" do
+          %p.group__name 
+            test2
+          %p.group__latest-message 
+            tttttt
+   
+
+
+
+    
