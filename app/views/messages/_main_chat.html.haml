@@ -1,28 +1,22 @@
 .chat-main
   .group-info
     .group-info__current-group
-      .group-info__current-group--group-name test
-      %ul.group-info__current-group--member-list Member: user
-    %a=link_to "Edit", "#", class: "group-info__edit-group"
+      .group-info__current-group--group-name
+        = @group.name
+      %ul.group-info__current-group--member-list
+        Member:
+        - @group.users.each do |user|
+          = user.name
+    = link_to "Edit", edit_group_path(@group), class: "group-info__edit-group"
+
   .message-list
-    .message
-      .message__info
-        .message__info--user-name user
-        .message__info--date 2020/4/28(Tue) 12:33:12
-      .message__text tttt
-      .message__info
-        .message__info--user-name user
-        .message__info--date 2020/4/28(Tue) 12:33:12
-      .message__text tttt2  
-      .message__info
-        .message__info--user-name user
-        .message__info--date 2020/4/28(Tue) 12:33:12
-      .message__text tttt3
+    = render @messages
   .message-form
-    %form.new-message
+    = form_for [@group, @message] do |f|
       .input
-        %input{type: "text", class: "input__text", placeholder: "type a message", }
-        %label{class: "input__image"}
-          = icon('far fa-image', class: "input__image")
-          %input{type: "file", class: "input__image__file"}
-      %input{type: "submit", class: "submit-btn", value: "Send"}
+        = f.text_field :text, class: 'input__text', placeholder: 'type a message'
+        .input__mask
+          = f.label :image, class: 'input__mask__image' do
+            = icon('fas', 'image')
+            = f.file_field :image, class: 'input__mask__hidden'        
+        = f.submit 'Send', class: 'input__submit'  

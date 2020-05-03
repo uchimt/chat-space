@@ -35,7 +35,7 @@
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
       padding-top: 35px;
-    }
+    
       .message {
         margin: 0 40px;
         &__info {
@@ -57,35 +57,38 @@
           padding-bottom: 46px;
         }
       }
+    }
     .message-form {
       height: 90px;
       background-color: #d2d2d2;
       padding: 20px 40px;
-      .new-message {
-        width: 100%;
+      
+      .input {
+        height: 50px;
+        width: 100%;  
         display: flex;
-        justify-content: space-between;
-        .input {
+        justify-content: space-between; 
+        
+        &__text {
           height: 50px;
-          width: 100%; 
+          width: 100%;
+          padding: 0 40px 0 10px;
+          border-style: none;     
+        }
+        &__mask {
           position: relative;
-          &__text {
-            height: 50px;
-            width: 100%;
-            padding: 0 10px;
-          }
           &__image {
             position: absolute;
-            line-height: 50px;
             right: 10px;
-            font-size: 1.5em;
+            top: 10px;
+            font-size: 1.5rem;
             cursor: pointer;
           }
-          &__image__file {
+          &__hidden {
             display: none;
           }
         }
-        .submit-btn {
+        &__submit {
           height: 50px;
           width: 100px;
           background-color: $btLblueColor;
@@ -93,7 +96,7 @@
           font-size: 16px;
           color: $textWhiteColor;
           cursor: pointer;
-        }
+        }  
       }
     }
   }
