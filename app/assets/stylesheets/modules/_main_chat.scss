@@ -1,6 +1,7 @@
 .chat-main {
-    height: 100vh;
+    height: calc(100vh - 180px);
     width: calc(100vw - 300px);
+    
     .group-info {
       height: 100px;
       background-color: #ffffff;
@@ -16,7 +17,7 @@
         &--member-list {
           color: $subtextGrayColor;
           font-size: 12px;
-          padding-top: 15px;
+          padding-top: 10px;
         }
       }
       &__edit-group {
@@ -35,7 +36,7 @@
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
       padding-top: 35px;
-    
+      overflow: scroll;
       .message {
         margin: 0 40px;
         &__info {
