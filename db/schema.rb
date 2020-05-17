@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20200502071258) do
     t.datetime "remember_created_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
   end
 
   add_foreign_key "group_users", "groups"
